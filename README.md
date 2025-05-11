@@ -29,7 +29,7 @@ Proje aşağıdaki ücretsiz hosting platformunda yayınlanmıştır:
 🔗 [Site Linki](https://orneklink.000webhostapp.com)
 
 ## 🔗 GitHub Proje Linki
-[https://github.com/kullaniciadi/webteknolojileri-proje](https://github.com/kullaniciadi/webteknolojileri-proje)
+[[https://github.com/kullaniciadi/webteknolojileri-proje]([https://github.com/kullaniciadi/webteknolojileri-proje](https://github.com/salihoz28/salihoz-WEBtek-Proje))]
 
 ## 📅 Teslim ve Sunum Bilgisi
 - **Teslim Tarihi:** 25 Mayıs 2025, Pazar 23:00 (Sabis üzerinden)
