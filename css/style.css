@@ -1,0 +1,30 @@
+
+.resim-kapsayici {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background-color: green;
+  overflow: hidden;
+}
+
+.resimSlider {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+body {
+    padding-top: 50px;
+}
+
+.hakkimda {
+    background-color: #f2f2f2;
+}
+
+.hakkimda .container .salih {
+    border: none;
+    border-top: 3px solid #343a40;
+    max-width: 250px;
+    margin: 25px auto;
+    color: black;
+}
