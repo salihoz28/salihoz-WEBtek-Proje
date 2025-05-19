@@ -1,94 +1,110 @@
-
 <!doctype html>
-<html lang="en">
+<html lang="tr">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style2.css">
-    <title>iletisim</title>
-    <script src="js/kontrol.js"></script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>İletişim</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style3.css">
+  <script src="js/kontrol.js" defer></script>
 </head>
 
 <body>
-    <!--NAVBAR   Menu Başlangıç  NAVBAR-->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #28a745;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">İletişim</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">İletişim</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="hakkimda.html">Anasayfa</a>
-                    </li>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="hakkimda.html">Anasayfa</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                </ul>
-            </div>
+  <!-- Form -->
+  <div class="container my-5">
+    <h2 class="mb-4">İletişim Formu</h2>
+    <form action="form.php" method="POST" onsubmit="return klasikKontrol();">
+
+      <div class="mb-3">
+        <label for="ad" class="form-label">Ad Soyad</label>
+        <input type="text" class="form-control" id="ad" name="ad" placeholder="Adınız ve Soyadınız">
+      </div>
+
+      <div class="mb-3">
+        <label for="mail" class="form-label">Email adresi</label>
+        <input type="email" class="form-control" id="mail" name="mail" placeholder="Mail adresiniz">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Cinsiyet</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="cinsiyet" id="erkek" value="erkek" checked>
+          <label class="form-check-label" for="erkek">Erkek</label>
         </div>
-    </nav>
-    <!-- NAVBAR   Menü Bitiş   NAVBAR-->
-    <div class="iletisim">
-	<form action="form.php" method="POST" onsubmit="return klasikKontrol();">
-            <div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="cinsiyet" id="kadin" value="kadin">
+          <label class="form-check-label" for="kadin">Kadın</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="cinsiyet" id="diger" value="diger">
+          <label class="form-check-label" for="diger">Belirtmek İstemiyor</label>
+        </div>
+      </div>
 
-            </div>
+      <div class="mb-3">
+        <label for="edc" class="form-label">Eğitim Durumu</label>
+        <input class="form-control" list="egitimListesi" id="edc" name="edc" placeholder="Eğitim durumunuz">
+        <datalist id="egitimListesi">
+          <option value="İlkokul">
+          <option value="Ortaokul">
+          <option value="Lise">
+          <option value="Üniversite - Önlisans">
+          <option value="Üniversite - Lisans">
+          <option value="Yüksek Lisans">
+        </datalist>
+      </div>
 
+      <div class="mb-3">
+        <label class="form-label">Hakim Olduğunuz Diller</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dil[]" value="C-"> <label class="form-check-label">C</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dil[]" value="PHP-"> <label class="form-check-label">PHP</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dil[]" value="Java-"> <label class="form-check-label">Java</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dil[]" value="Python-"> <label class="form-check-label">Python</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dil[]" value="VB-"> <label class="form-check-label">Visual Basic</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dil[]" value="JavaScript-"> <label class="form-check-label">JavaScript</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dil[]" value="Pascal-"> <label class="form-check-label">Pascal</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" name="dil[]" value="HTML"> <label class="form-check-label">HTML</label>
+        </div>
+      </div>
 
-            <div class="name">
-                <h3> İletişim Formu</h3>
-                <input type="text" placeholder="Adınız Ve Soyadınız" name="ad"> <br><br>
-                <input type="email" placeholder="Mail Adresiniz (@)" name="mail"> <br>
-            </div>
-
-            <br><br>
-            <div class="gender">
-                Cinsiyet:<br>
-                <input type="radio" name="cinsiyet" value="erkek" checked>Erkek<br>
-                <input type="radio" name="cinsiyet" value="kadin">Kadın <br>
-                <input type="radio" name="cinsiyet" value="diger">Belirtmek İstemiyor
-            </div>
-            <br><br><br>
-            <div class="edu">
-                <input type="text" list="Eğitim" placeholder="Eğitim Durumunuz" name="edc">
-                <datalist id="Eğitim">
-                <option name="1"  value="İlkokul">1' den 4' e kadar</option>
-                <option name="2" value="Ortaokul">5' den 8' e kadar</option>
-                <option name="3" value="Lise">9' dan 12' e kadar</option>
-                <option name="4" value="Üniversite">Önlisans</option>
-                <option name="5" value="Üniversite">Lisans</option>
-                <option name="6" value="Üniversite">YükeskLisans</option>
-            </datalist>
-            </div>
-            <br><br><br>
-
-
-
-            <div class="lang">
-                Hakim Diller:<br>
-                <input type="checkbox" name="dil[]" value="C-">C<br>
-                <input type="checkbox" name="dil[]" value=" PHP -">PHP<br>
-                <input type="checkbox" name="dil[]" value=" Java -">Java<br>
-                <input type="checkbox" name="dil[]" value=" Python -">Python<br>
-                <input type="checkbox" name="dil[]" value=" VB -">Visual Basic<br>
-                <input type="checkbox" name="dil[]" value=" JavaScript -">JavaScript<br>
-                <input type="checkbox" name="dil[]" value=" Pascal -">Pascal<br>
-                <input type="checkbox" name="dil[]" value=" HTML">HTML<br>
-            </div>
-            <br>
-            <br>
-            <br>
-
-            <div class="city">
-                Şehir :<br>
-                <select name="sehrim">
-                <option value="Adana">Adana</option>
+      <div class="mb-3">
+        <label for="sehrim" class="form-label">Şehir</label>
+        <select class="form-select" id="sehrim" name="sehrim">
+          <option selected disabled>Şehrinizi seçiniz</option>
+          <option value="Adana">Adana</option>
                 <option value="Adıyaman">Adıyaman</option>
                 <option value="Afyonkarahisar">Afyonkarahisar</option>
                 <option value="Ağrı">Ağrı</option>
@@ -169,75 +185,65 @@
                 <option value="Kilis">Kilis</option>
                 <option value="Osmaniye">Osmaniye</option>
                 <option value="Düzce">Düzce</option>
-            </select>
-            </div>
-            <br>
-            <br>
-            <br>
-            <div class="mesaj">
-                <textarea name="mesaj" rows="10" cols="20" placeholder="Mesajınız buraya yazınız."></textarea>
 
-            </div>
-            <br>
-            <br>
-            <br>
-           <div class="buton">
-              <input type="submit" value="Gönder (JS ile kontrol)">
-              <input type="reset" value="Sıfırla">
+        </select>
+      </div>
 
-	     <div id="vueApp">
-                <button type="button" @click="vueKontrol">Vue.js ile Doğrula</button>
-           </div>
-           </div> 
-	  
+      <!-- Mesaj Alanı -->
+      <div class="mb-3">
+        <label for="mesaj" class="form-label">Mesajınız</label>
+        <textarea class="form-control" id="mesaj" name="mesaj" rows="5" placeholder="Mesajınızı buraya yazınız."></textarea>
+      </div>
 
-        </form>
-    </div>
+      <div class="mb-3">
+        <input type="submit" class="btn btn-primary" value="Gönder (JS ile kontrol)">
+        <input type="reset" class="btn btn-secondary" value="Sıfırla">
+      </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-<script>
-  new Vue({
-    el: '#vueApp',
-    data: {
-      ad: '',
-      mail: '',
-      mesaj: ''
-    },
-    methods: {
-      vueKontrol() {
-        this.ad = document.forms[0]["ad"].value.trim();
-        this.mail = document.forms[0]["mail"].value.trim();
-        this.mesaj = document.forms[0]["mesaj"].value.trim();
+      <div id="vueApp">
+        <button type="button" class="btn btn-success" @click="vueKontrol">Vue.js ile Doğrula</button>
+      </div>
 
-        const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    </form>
+  </div>
 
-        if (this.ad === '' || this.mail === '' || this.mesaj === '') {
-          alert("Vue: Ad, mail ve mesaj alanları zorunludur.");
-          return;
+  <!-- Vue.js -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script>
+    new Vue({
+      el: '#vueApp',
+      data: {
+        ad: '',
+        mail: '',
+        mesaj: ''
+      },
+      methods: {
+        vueKontrol() {
+          this.ad = document.getElementById("ad").value.trim();
+          this.mail = document.getElementById("mail").value.trim();
+          this.mesaj = document.getElementById("mesaj").value.trim();
+
+          const mailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (this.ad === '' || this.mail === '' || this.mesaj === '') {
+            alert("Vue: Ad, mail ve mesaj alanları zorunludur.");
+            return;
+          }
+
+          if (!mailRegex.test(this.mail)) {
+            alert("Vue: Geçersiz e-posta adresi.");
+            return;
+          }
+
+          alert("Vue.js kontrolü başarılı.");
+          document.forms[0].submit();
         }
-
-        if (!mailRegex.test(this.mail)) {
-          alert("Vue: Geçersiz e-posta adresi.");
-          return;
-        }
-	
-	 alert("Vue.js kontrolü başarılı.");
-
-        // Doğrulama başarılıysa formu gönder
-        document.forms[0].submit();
       }
-    }
-  });
-</script>
+    });
+  </script>
 
-
-
-
-
-    <br>
-    <br>
-    <br>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
