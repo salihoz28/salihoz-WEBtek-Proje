@@ -29,7 +29,7 @@ echo $_POST ['mesaj'];
 {
     echo "e-mail girmek zorunlu alan";
 }
-echo "<p> <a href='indexBootstrap.html'>&lt;ANA SAYFA&gt;</a></p> ";
+echo "<p> <a href='hakkimda.html'>&lt;ANA SAYFA&gt;</a></p> ";
 echo "<p> <a href='iletisim.html'>&lt;GERİ DÖN&gt;</a></p> ";
     
 
