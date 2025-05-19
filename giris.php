@@ -13,7 +13,7 @@ if (!empty($_POST['mail'])) {
             $kullaniciAdi = explode("@", $gecici)[0];
             $message = "Hoş Geldin $kullaniciAdi --> Tamam tuşuna basınca ana sayfaya yönlendirileceksiniz...";
             echo "<script type='text/javascript'>alert('$message');</script>";
-            header("Refresh: 0.1; indexBootstrap.html");
+            header("Refresh: 0.1; hakkimda.html");
             exit();
         }
     } else {
