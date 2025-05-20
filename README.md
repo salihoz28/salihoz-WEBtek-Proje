@@ -26,7 +26,7 @@ Web sitesi aşağıdaki sayfalardan oluşmaktadır:
 ## 🌐 Hosting
 Proje aşağıdaki ücretsiz hosting platformlarından birinde yayınlanacaktır:
 
-🔗 [Site Yayın Linki](https://orneklink.000webhostapp.com) <!-- Bu alanı siteyi yükleyince güncelle -->
+🔗 [[Site Yayın Linki](https://orneklink.000webhostapp.com)](https://ciresun.free.nf/) <!-- Bu alanı siteyi yükleyince güncelle -->
 
 ## 🔗 GitHub Projesi
 Tüm kodlara ve gelişmelere aşağıdaki GitHub bağlantısından ulaşabilirsiniz:  
