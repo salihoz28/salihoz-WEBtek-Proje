@@ -1,24 +1,20 @@
-
-<html>
-
+<!doctype html>
+<html lang="tr">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Giriş </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giriş</title>
+  <!-- harici CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <div class="giris" style="text-align: justify; margin-left:45%; margin-right:45%; max-width: 10%; margin-top:10%; ">
-        <form action="giris.php" method="POST">
-            <input type="email" placeholder="Mail Adresiniz (@)" name="mail"> <br>
-            <input type="password" placeholder=" Şifre" name="sifre">
-            <input type="submit" value="Giriş">
-        </form>
-    </div>
-
-
-
+  <div class="giris">
+    <h1>Üye Girişi</h1>
+    <form action="giris.php" method="POST">
+      <input type="email" name="mail" placeholder="b241210034@sakarya.edu.tr" autocomplete="off">
+      <input type="password" name="sifre" placeholder="Şifreniz" autocomplete="off">
+      <input type="submit" value="Giriş">
+    </form>
+  </div>
 </body>
-
-
 </html>
